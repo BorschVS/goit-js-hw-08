@@ -28,12 +28,12 @@ function populateTextarea() {
     const parsedFormData = JSON.parse(savedFormData);
     refs.email.value = parsedFormData.email ?? '';
     refs.textarea.value = parsedFormData.message ?? '';
-
-    console.log(parsedFormData);
   }
 }
 
 function onFormSubmit(e) {
+  console.log(formData);
+
   e.preventDefault();
   e.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
